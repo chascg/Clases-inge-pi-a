@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "author": "Isaac castelan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -18.6, "left": 210.6, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -20.5, "left": 556.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "pot1:GND", "uno:GND.2", "black", [ "v153.6", "h-201.6" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v172.8", "h-231.2" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v163.2", "h-192.4" ] ]
+  ],
+  "dependencies": {}
+}
