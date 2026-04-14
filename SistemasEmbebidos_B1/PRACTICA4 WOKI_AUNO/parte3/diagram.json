@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Isaac castelan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 183, "left": -19.8, "attrs": {} },
+    { "type": "wokwi-ky-040", "id": "encoder1", "top": 260.9, "left": 968.8, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -7.2,
+      "left": 155.4,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "bz1:2", "uno:5", "green", [ "v0" ] ],
+    [ "bz1:1", "uno:GND.2", "black", [ "v76.8", "h-220.8", "v240", "h182.4" ] ]
+  ],
+  "dependencies": {}
+}
