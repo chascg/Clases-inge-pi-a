@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "author": "Isaac castelan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -210.9, "left": 52.2, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -118.8,
+      "left": 205.4,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -53.65,
+      "left": 201.6,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -63.25,
+      "left": 76.8,
+      "attrs": { "value": "10000" }
+    }
+  ],
+  "connections": [
+    [ "dht1:SDA", "r2:1", "green", [ "v0" ] ],
+    [ "r2:2", "uno:5V", "red", [ "v48", "h-145.2", "v220.8", "h172.8" ] ],
+    [ "dht1:VCC", "uno:5V", "red", [ "v67.2", "h-86.4", "v249.6", "h182.4" ] ],
+    [ "r2:2", "uno:4", "green", [ "h18", "v48", "h63.9" ] ],
+    [ "led2:A", "r1:2", "green", [ "v9.6", "h28.8" ] ],
+    [ "led2:C", "uno:GND.1", "black", [ "v19.2", "h-47.6", "v38.4", "h-57.6" ] ],
+    [ "dht1:GND", "uno:GND.1", "black", [ "v19.2", "h67.2", "v48", "h-48" ] ],
+    [ "r1:1", "uno:2", "green", [ "v19.2", "h38.4", "v38.4", "h-3.5" ] ]
+  ],
+  "dependencies": {}
+}
