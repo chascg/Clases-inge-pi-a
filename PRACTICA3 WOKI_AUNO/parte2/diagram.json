@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "Isaac castelan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 183, "left": -19.8, "attrs": {} },
+    { "type": "wokwi-ky-040", "id": "encoder1", "top": 30.5, "left": 8.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "encoder1:CLK", "uno:2", "green", [ "h0" ] ],
+    [ "encoder1:DT", "uno:3", "green", [ "h0" ] ],
+    [ "encoder1:SW", "uno:4", "green", [ "h0" ] ],
+    [ "encoder1:VCC", "uno:5V", "red", [ "h19.2", "v106", "h-172.8", "v220.8", "h172.8" ] ],
+    [ "encoder1:GND", "uno:GND.2", "black", [ "h0", "v77.6", "h-163.2", "v249.6", "h192" ] ]
+  ],
+  "dependencies": {}
+}

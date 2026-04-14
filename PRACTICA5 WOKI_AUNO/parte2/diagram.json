@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "author": "Isaac castelan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 183, "left": -19.8, "attrs": {} },
+    { "type": "wokwi-ky-040", "id": "encoder1", "top": 260.9, "left": 968.8, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -36,
+      "left": 1230.6,
+      "attrs": { "volume": "0.1" }
+    },
+    { "type": "wokwi-ds18b20", "id": "temp1", "top": -10.73, "left": 167.28, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -38.1, "left": -5.4, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 61.55,
+      "left": 105.6,
+      "attrs": { "value": "4700" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -22.8,
+      "left": 263,
+      "attrs": { "color": "red", "flip": "1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 71.15,
+      "left": 211.2,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "temp1:VCC", "uno:5V", "red", [ "v124.8", "h86.4", "v240", "h-134.4" ] ],
+    [ "temp1:GND", "uno:GND.2", "black", [ "v134.4", "h96", "v220.8", "h-115.2" ] ],
+    [ "temp1:DQ", "r1:2", "green", [ "v48" ] ],
+    [ "r1:1", "uno:5V", "red", [ "v76.8", "h-134.4", "v259.2", "h163.2" ] ],
+    [ "r1:2", "uno:7", "green", [ "v0" ] ],
+    [ "led1:A", "r2:2", "gold", [ "v0" ] ],
+    [ "r2:1", "uno:13", "gold", [ "v67.2", "h-28.8" ] ],
+    [ "led1:C", "uno:GND.2", "black", [ "v403.2", "h-134.4", "v-9.6" ] ],
+    [ "dht1:GND", "uno:GND.2", "black", [ "v48", "h-76.8", "v307.2", "h192" ] ],
+    [ "dht1:VCC", "uno:5V", "red", [ "v28.8", "h-57.6", "v355.2", "h9.6" ] ],
+    [ "dht1:SDA", "uno:8", "violet", [ "v76.8", "h0.1" ] ]
+  ],
+  "dependencies": {}
+}

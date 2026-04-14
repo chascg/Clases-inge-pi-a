@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Isaac castelan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 183, "left": -19.8, "attrs": {} },
+    { "type": "wokwi-ky-040", "id": "encoder1", "top": 260.9, "left": 968.8, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 34.8, "left": 51.8, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 109.55,
+      "left": 86.4,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "led1:A", "r1:1", "green", [ "v0" ] ],
+    [ "led1:C", "uno:GND.2", "black", [ "v76.8", "h-124.4", "v240", "h192" ] ],
+    [ "r1:2", "uno:13", "green", [ "v57.6", "h-39.6", "v9.6" ] ]
+  ],
+  "dependencies": {}
+}
